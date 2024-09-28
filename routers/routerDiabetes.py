@@ -42,8 +42,7 @@ def Predict_diabetes(data:schemas.Cropdata):
         Rainfall]).reshape(1,7)
 
     prediction = model.predict(xin)
-    yout = labels[prediction[0]]
-
+   
     return{
-        'prediction':yout
+        'prediction':prediction[0]
     }
